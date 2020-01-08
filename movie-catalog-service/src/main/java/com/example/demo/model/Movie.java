@@ -5,10 +5,12 @@ public class Movie {
 	private String movieId;
 	private String name;
 	private String description;
-
 	
 	public Movie() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
+	
 	
 	public Movie(String movieId, String name, String description) {
 		super();
@@ -30,16 +32,14 @@ public class Movie {
 	public void setName(String name) {
 		this.name = name;
 	}
+	@Override
+	public String toString() {
+		return "Movie [movieId=" + movieId + ", name=" + name + "]";
+	}
 	public String getDescription() {
 		return description;
 	}
 	public void setDescription(String description) {
 		this.description = description;
 	}
-
-	@Override
-	public String toString() {
-		return "Movie [movieId=" + movieId + ", name=" + name + ", description=" + description + "]";
-	}
-	
 }
