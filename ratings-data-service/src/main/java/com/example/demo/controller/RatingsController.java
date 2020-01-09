@@ -22,7 +22,8 @@ public class RatingsController {
 
 	@GetMapping("users/{userId}")
 	public UserRatings getUserRatings(@PathVariable String userId) {
-		List<Rating> ratings = Arrays.asList(new Rating("11", 4), new Rating("22", 4));
+		List<Rating> ratings = Arrays.asList(new Rating(Integer.toString((int) (10.0 * Math.random())), (int) (10.0 * Math.random())),
+				new Rating(Integer.toString((int) (10.0 * Math.random())), (int) (10.0 * Math.random())));
 		UserRatings userRatings = new UserRatings();
 		userRatings.setUserRating(ratings);
 		return userRatings;

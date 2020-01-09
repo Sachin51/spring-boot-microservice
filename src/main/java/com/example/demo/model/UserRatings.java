@@ -4,7 +4,6 @@ import java.util.List;
 
 public class UserRatings {
 
-	private String userId;
 	private List<Rating> userRating;
 	
 	public UserRatings() {
@@ -12,9 +11,8 @@ public class UserRatings {
 		// TODO Auto-generated constructor stub
 	}
 
-	public UserRatings(String userId, List<Rating> userRating) {
+	public UserRatings(List<Rating> userRating) {
 		super();
-		this.userId = userId;
 		this.userRating = userRating;
 	}
 
@@ -26,16 +24,10 @@ public class UserRatings {
 		this.userRating = userRating;
 	}
 
-	public String getUserId() {
-		return userId;
-	}
-
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
-	
 	@Override
 	public String toString() {
 		return "UserRatings [userRating=" + userRating + "]";
 	}
+	
+	
 }
